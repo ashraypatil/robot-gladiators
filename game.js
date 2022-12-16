@@ -91,8 +91,10 @@ if (playerHealth > 0) {
   // pick new enemy to fight based on the index of the enemyNames array
     var pickedEnemyName = enemyNames[i];
 
-    // reset enemyHealth before starting new fight
-    enemyHealth = randomNumber();
+    // generate random damage value based on player's attack power
+var damage = randomNumber(playerAttack - 3, playerAttack);
+
+enemyHealth = randomNumber(40, 60);
 
 
     // use debugger to pause script from running and check what's going on at that moment in the code
